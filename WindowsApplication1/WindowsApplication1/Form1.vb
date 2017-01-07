@@ -875,12 +875,7 @@
     Private Sub 開くOToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 開くOToolStripMenuItem.Click
         Dim fs As System.IO.StreamReader()
         Dim shfd As FileDialog
-        shfd = New FileDialog()
-
-        fs = shfd.FileName
-
-        prouquoi?
-
+ 
 
 
 
