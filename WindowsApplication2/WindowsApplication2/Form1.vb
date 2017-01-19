@@ -22,7 +22,6 @@
             Timer1.Enabled = True
         Else
 
-
             Timer1.Enabled = False
 
         End If
@@ -33,9 +32,7 @@
         Dim udp As System.Net.Sockets.UdpClient = _
        DirectCast(AR.AsyncState, System.Net.Sockets.UdpClient)
         Dim ipAny As System.Net.IPEndPoint = New System.Net.IPEndPoint(System.Net.IPAddress.Any, 0)
-        Dim dat As Byte() = o
-
-        bjSck.EndReceive(AR, ipAny)
+        Dim dat As Byte() = objSck.EndReceive(AR, ipAny)
         Dim rcvmg As String = System.Text.Encoding.UTF8.GetString(dat)
 
         TextBox1.BeginInvoke(New Action(Of String)(AddressOf showstringtextbox), rcvmg)
