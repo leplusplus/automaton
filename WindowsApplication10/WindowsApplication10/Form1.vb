@@ -78,4 +78,8 @@
         '出力された結果を表示
         Console.WriteLine(results)
     End Sub
+
+    Private Sub Program_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
