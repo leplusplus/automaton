@@ -49,7 +49,7 @@
     'エントリポイント
 
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub commit()
         Dim p As New System.Diagnostics.Process()
 
         'ComSpec(cmd.exe)のパスを取得して、FileNameプロパティに指定
@@ -61,7 +61,36 @@
         'ウィンドウを表示しないようにする
         p.StartInfo.CreateNoWindow = True
         'コマンドラインを指定（"/c"は実行後閉じるために必要）
-        p.StartInfo.Arguments = "/c C:\Users\Le\Documents\togit.bat abc"
+        p.StartInfo.Arguments = "/c C:\Users\Le\Documents\gitcommit.bat abc"
+
+        '起動
+        p.Start()
+
+        '出力を読み取る
+        Dim results As String = p.StandardOutput.ReadToEnd()
+
+        'プロセス終了まで待機する
+        'WaitForExitはReadToEndの後である必要がある
+        '(親プロセス、子プロセスでブロック防止のため)
+        p.WaitForExit()
+        p.Close()
+
+        '出力された結果を表示
+        Console.WriteLine(results)
+    End Sub
+    Private Sub push()
+        Dim p As New System.Diagnostics.Process()
+
+        'ComSpec(cmd.exe)のパスを取得して、FileNameプロパティに指定
+        p.StartInfo.FileName = System.Environment.GetEnvironmentVariable("ComSpec")
+        '出力を読み取れるようにする
+        p.StartInfo.UseShellExecute = False
+        p.StartInfo.RedirectStandardOutput = True
+        p.StartInfo.RedirectStandardInput = False
+        'ウィンドウを表示しないようにする
+        p.StartInfo.CreateNoWindow = True
+        'コマンドラインを指定（"/c"は実行後閉じるために必要）
+        p.StartInfo.Arguments = "/c C:\Users\Le\Documents\gitpush.bat abc"
 
         '起動
         p.Start()
@@ -81,5 +110,14 @@
 
     Private Sub Program_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Call commit()
+
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        Call push()
     End Sub
 End Class
