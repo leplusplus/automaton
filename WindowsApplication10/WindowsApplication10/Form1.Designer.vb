@@ -26,8 +26,7 @@ Partial Class Program
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.ToolStripContainer1.SuspendLayout()
+    
         Me.SuspendLayout()
         '
         'Timer1
@@ -37,7 +36,7 @@ Partial Class Program
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(125, 77)
+        Me.Button1.Location = New System.Drawing.Point(164, 120)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -49,36 +48,24 @@ Partial Class Program
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 3600000
         '
-        'ToolStripContainer1
-        '
-        '
-        'ToolStripContainer1.ContentPanel
-        '
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(150, 175)
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(8, 8)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(150, 175)
-        Me.ToolStripContainer1.TabIndex = 3
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        '
+     
         'Program
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.ToolStripContainer1)
+  
         Me.Controls.Add(Me.Button1)
+
         Me.Name = "Program"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout()
+    
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
-
+   
 End Class
