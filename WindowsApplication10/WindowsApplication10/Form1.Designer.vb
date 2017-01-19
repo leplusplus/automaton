@@ -23,18 +23,16 @@ Partial Class Program
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Timer1 As System.Windows.Forms.Timer
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
         '
-        Timer1.Enabled = True
-        Timer1.Interval = 60000
-        AddHandler Timer1.Tick, AddressOf Me.Timer1_Tick
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 60000
         '
         'Button1
         '
@@ -57,7 +55,7 @@ Partial Class Program
         'Timer2
         '
         Me.Timer2.Enabled = True
-        Me.Timer2.Interval = 60000
+        Me.Timer2.Interval = 3600000
         '
         'Program
         '
@@ -76,5 +74,6 @@ Partial Class Program
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 
 End Class
