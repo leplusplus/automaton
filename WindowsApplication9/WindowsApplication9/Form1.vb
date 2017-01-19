@@ -7,6 +7,8 @@
         OpenFileDialog1.ShowDialog()
         filein = OpenFileDialog1.FileName
 
+
+
         Dim fs As IO.StreamReader
         fs = New IO.StreamReader(filein)
 
