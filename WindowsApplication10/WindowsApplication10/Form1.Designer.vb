@@ -26,7 +26,7 @@ Partial Class Program
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-    
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.SuspendLayout()
         '
         'Timer1
@@ -48,24 +48,31 @@ Partial Class Program
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 3600000
         '
-     
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 239)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(284, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
         'Program
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-  
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button1)
-
         Me.Name = "Program"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
-    
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
    
 End Class
