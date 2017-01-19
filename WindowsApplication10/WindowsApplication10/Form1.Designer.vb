@@ -25,8 +25,9 @@ Partial Class Program
         Me.components = New System.ComponentModel.Container()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -43,37 +44,41 @@ Partial Class Program
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(24, 261)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
         'Timer2
         '
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 3600000
+        '
+        'ToolStripContainer1
+        '
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(150, 175)
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(8, 8)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(150, 175)
+        Me.ToolStripContainer1.TabIndex = 3
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
         'Program
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Program"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+        Me.ToolStripContainer1.ResumeLayout(False)
+        Me.ToolStripContainer1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
 
 End Class
