@@ -18,7 +18,7 @@
         g = e.Graphics
         Dim n As Integer
         For x = 0 To Panel1.Width
-            alpha = CSng(x) / Panel1.Width * 4.0
+            alpha = (CSng(x) / Panel1.Width * 4.0) / 2 + 2
             y = 0.1
             For n = 1 To 10
                 y = alpha * y * (1 - y)
