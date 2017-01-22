@@ -6,15 +6,15 @@
         Dim i As Integer
         numberofPoint = 0
         For i = 0 To 9999
-            x(numberofPoint) = Rnd() * Panel1.Width
-            y(numberofPoint) = Rnd() * Panel1.Height
+            x(i) = Rnd() * Panel1.Width
+            y(i) = Rnd() * Panel1.Height
 
             numberofPoint = numberofPoint + 1
 
         Next
         
 
-        Panel1.Refresh()
+        ' Panel1.Refresh()
 
     End Sub
 
