@@ -13,8 +13,7 @@
 
 
         Next
-        
-
+      
         Panel1.Refresh()
 
     End Sub
