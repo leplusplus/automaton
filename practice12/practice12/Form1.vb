@@ -11,6 +11,8 @@
 
             numberofPoint = numberofPoint + 1
 
+            Panel1.Refresh()
+
         Next
         
 
@@ -24,7 +26,7 @@
         g = e.Graphics
 
         For i = 0 To numberofPoint
-            g.DrawEllipse(Pens.Black, x(i) - 2, y(i) - 2, 4, 4)
+            g.DrawEllipse(Pens.Black, x(i) - 1, y(i) - 1, 2, 2)
         Next
     End Sub
 End Class
