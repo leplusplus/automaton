@@ -11,7 +11,7 @@
     Private Sub HScrollBar1_Scroll(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ScrollEventArgs) Handles HScrollBar1.Scroll
         Dim alpha As Single
 
-        alpha = HScrollBar1.Value / 100.0 * 4
+        alpha = HScrollBar1.Value / 100.0 + 3
         y(0) = 0.5
         For i = 1 To Panel1.Width
             y(i) = alpha * y(i - 1) * (1 - y(i - 1))
