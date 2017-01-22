@@ -11,12 +11,11 @@
 
             numberofPoint = numberofPoint + 1
 
-            Panel1.Refresh()
 
         Next
         
 
-        ' Panel1.Refresh()
+        Panel1.Refresh()
 
     End Sub
 
