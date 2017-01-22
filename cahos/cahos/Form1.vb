@@ -20,7 +20,7 @@
         For x = 0 To Panel1.Width
             alpha = CSng(x) / Panel1.Width * 4.0
             y = 0.1
-            For n = 1 To HScrollBar1.Value
+            For n = 1 To 10
                 y = alpha * y * (1 - y)
             Next
             For n = 1 To 10
