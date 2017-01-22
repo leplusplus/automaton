@@ -22,6 +22,9 @@
             y = 0.1
             For n = 1 To HScrollBar1.Value
                 y = alpha * y * (1 - y)
+            Next
+            For n = 1 To 10
+                y = alpha * y * (1 - y)
                 g.DrawLine(Pens.Black, x, y * Panel1.Height, x, (y * Panel1.Height) - 1)
             Next
         Next

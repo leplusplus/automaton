@@ -37,7 +37,6 @@ Partial Class Form1
         'HScrollBar1
         '
         Me.HScrollBar1.Location = New System.Drawing.Point(46, 389)
-        Me.HScrollBar1.Maximum = 20
         Me.HScrollBar1.Name = "HScrollBar1"
         Me.HScrollBar1.Size = New System.Drawing.Size(596, 17)
         Me.HScrollBar1.TabIndex = 0
