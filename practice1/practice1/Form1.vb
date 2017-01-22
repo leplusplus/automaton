@@ -8,7 +8,7 @@
         For i = 1 To 100
             x = CInt(Rnd() * Panel1.Width)
             y = CInt(Rnd() * Panel1.Height)
-            g.DrawEllipse(Pens.Black, x, y, 5, 5)
+            g.DrawEllipse(Pens.Black, x - 1, y - 1, 2, 2)
 
         Next
 
