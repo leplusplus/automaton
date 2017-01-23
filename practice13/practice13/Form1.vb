@@ -13,6 +13,7 @@ Public Class Form1
             x(i) = Rnd() * Panel1.Width
             y(i) = Rnd() * Panel1.Height
 
+
             If (x(i) - Panel1.Width / 2) * (x(i) - Panel1.Width / 2) + (y(i) - Panel1.Height / 2) * (y(i) - Panel1.Height / 2) < (Panel1.Width * Panel1.Width / 4) Then
                 inside = inside + 1
             Else

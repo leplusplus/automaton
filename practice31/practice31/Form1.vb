@@ -10,19 +10,24 @@
             num_begin = CInt(TextBox1.Text)
         Catch ex As Exception
             MsgBox("「整数を入力してください")
-            Exit Sub
+            TextBox1.Text = ""
             TextBox1.Focus()
+            Exit Sub
 
         End Try
         Try
             num_end = CInt(TextBox2.Text)
         Catch ex As Exception
             MsgBox("「整数を入力してください")
+            TextBox2.Text = ""
+            TextBox2.Focus()
             Exit Sub
-            TextBox1.Focus()
-
-
         End Try
+
+        If num_begin >= num_end Then
+            MsgBox("開始数は終了数より小さくなくてはなりません。")
+            Exit Sub
+        End If
         TextBox3.Text = ""
 
         n_ofprime = 0

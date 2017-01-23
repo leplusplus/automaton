@@ -5,7 +5,7 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim i As Integer
         numberofPoint = 0
-        For i = 0 To 9999
+        For i = 0 To 10000
             x(i) = Rnd() * Panel1.Width
             y(i) = Rnd() * Panel1.Height
 
@@ -23,7 +23,7 @@
         Dim g As Graphics
         g = e.Graphics
 
-        For i = 0 To numberofPoint
+        For i = 0 To numberofPoint - 1
             g.DrawEllipse(Pens.Black, x(i) - 1, y(i) - 1, 2, 2)
         Next
     End Sub

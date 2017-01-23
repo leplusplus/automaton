@@ -15,6 +15,7 @@
         Dim g As Graphics
         Dim y As Single
         Dim alpha As Single
+
         g = e.Graphics
         Dim n As Integer
         For x = 0 To Panel1.Width
